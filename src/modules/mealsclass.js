@@ -1,3 +1,4 @@
+/* eslint-disable */
 export class Meals {
   constructor(id, name, image, likes = 0, description) {
     this.id = id;

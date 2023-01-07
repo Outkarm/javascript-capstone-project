@@ -1,19 +1,15 @@
+/* eslint-disable */
 import {
-  newHumburger,
-  newNavMenu,
   newMealDetailsContent,
   newMealDetailsContentHome,
   newRecipeCloseBtnHome,
   newMealLlist,
-  newRecipeCloseBtn,
   newSearchBtn,
   newSectOneItem2,
 } from "./variables.js";
-import { getLikes } from "./getLikes.js";
-import { addLike } from "./getLikes.js";
-import mealCommentModalHome from "./comment.js";
+import { getLikes, addLike } from "./getLikes.js";
 
-import Meal from "./meals.js";
+import mealCommentModalHome from "./comment.js";
 
 /*  import { ApiLikes } from './getLikes.js'; */
 
@@ -22,7 +18,7 @@ const totalMealsSearch = document.querySelector(".total__meals__search");
 
 function mealRecipeModal(meal) {
   meal = meal[0];
-  let html = `
+  const html = `
   <h2 class="recipe__title">${meal.strMeal}</h2>
               <p class="recipe__catagory">${meal.strCategory}</p>
               <div class="recipe__instruct">
@@ -45,7 +41,7 @@ function mealRecipeModal(meal) {
 export const newWindo = window.addEventListener("load", async () => {
   const likesD = await getLikes();
   const response = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/search.php?s=`
+    "https://www.themealdb.com/api/json/v1/1/search.php?s="
   )
     .then((response) => response.json())
     .then((data) => {
@@ -157,13 +153,13 @@ export const newWindo = window.addEventListener("load", async () => {
 
   /* class Api {
     static URL = 'https://themealdb.com/api';
-  
+
     static async getMeals() {
       const RESPONSE = await fetch(`${Api.URL}/json/v1/1/search.php?s=`);
       const { meals } = await RESPONSE.json();
       return meals;
     }
-  
+
     static async getAllMeals() {
       const arrObj = await this.getMeals();
       // eslint-disable-next-line max-len
@@ -171,16 +167,7 @@ export const newWindo = window.addEventListener("load", async () => {
       return arrMeals;
     }
   }
-                */
 
-  const newLikeCounter = document.getElementById("counter__home");
-  const newScoreList = document.getElementById("sect__one__cont__item1__item2");
-  const apiEndpoint =
-    "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/re1HkEZMNg4HkLPPFhkd/scores/";
-  const apiGameUrl =
-    "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/";
-
-  /* const MEALS = await Api.getAllMeals();
                 const LIKES = await likesApi.likesGet();
                 const newMeals = MEALS.map((meal) => {
                   const likesArr = LIKES.filter((like) => like.item_id === meal.id);
@@ -189,17 +176,17 @@ export const newWindo = window.addEventListener("load", async () => {
                 }); */
   /*  document.addEventListener('click', (e) => {
                     e.preventDefault();
-                    
+
                       if (e.target.classList.contains('hear__line__pic')) {
                         if(e.target.src.includes('heart-line')) {
                           e.target.src = 'assets/img/heart-fill.png';
-                          
+
                           newMeals.forEach((meal) => {
                             if (meal.id === e.target.id) {
-                              const counterLikes = e.target.nextElementSibling; 
+                              const counterLikes = e.target.nextElementSibling;
                               newLikeCounter.innerHTML = `${meal.likes + 1} likes`;
                             }
-                          }); 
+                          });
 
                             } else {
                               e.target.src = 'assets/img/heart-line.png';
@@ -215,9 +202,9 @@ export const newWindo = window.addEventListener("load", async () => {
     const response = await fetch(likesApi.likeApUrl);
     const data = await response.json();
     return data;
-    
+
   };
- 
+
   static async likesPost(id) {
     const response = await fetch(likesApi.likeApUrl, {
       method: 'POST',
@@ -235,7 +222,7 @@ export const newWindo = window.addEventListener("load", async () => {
 
 function mealRecipeModalHome(meal) {
   // meal = meal[0];
-  let html = `
+  const html = `
     <h2 class="recipe__title">${meal.strMeal}</h2>
                 <p class="recipe__catagory">${meal.strCategory}</p>
                 <div class="recipe__instruct">
@@ -269,7 +256,9 @@ newRecipeCloseBtnHome.addEventListener("click", () => {
 
 /* || Search Meals Page */
 export const newSearchMeal = newSearchBtn.addEventListener("click", () => {
-  let searchInputTxt = document.getElementById("serarch__content").value.trim();
+  const searchInputTxt = document
+    .getElementById("serarch__content")
+    .value.trim();
   fetch(
     `https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`
   )

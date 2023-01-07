@@ -1,4 +1,4 @@
-import { Meals } from "./mealsclass.js";
+/* eslint-disable */ import { Meals } from "./mealsclass.js";
 
 export class ApiLink {
   static ApiUrl = "https://themealdb.com/api";

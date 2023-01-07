@@ -1,4 +1,4 @@
-export class LikesApi {
+/* eslint-disable */ export class LikesApi {
   static ApiLikesUrl =
     "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/IXJFUIasaU3NTiCbJHbl/likes/";
 

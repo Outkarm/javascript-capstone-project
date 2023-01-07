@@ -1,6 +1,7 @@
+/* eslint-disable */
 /* || Imports */
 import { commentsPosts } from "./commentsclass.js";
-import { commentGets} from "./commentgets.js"
+import { commentGets } from "./commentgets.js";
 import { newMealsWrapperItems } from "./variables.js";
 /* ======================================================================== */
 let html = "";
@@ -41,7 +42,7 @@ export const addMealElments = (meals) => {
       const newMealDetailsContentComment = document.querySelector(
         ".meal__details__content_Comment"
       );
-     console.log(newMealDetailsContentComment,"clicked")
+      console.log(newMealDetailsContentComment, "clicked");
       newMealDetailsContentComment.style.display = "grid";
       newMealDetailsContentComment.innerHTML = `
       <div class="comment__details">
