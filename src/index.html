@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>JS Capeston Proj</title>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <nav id="navbar" class="navbar">
+        <a href="" class="logo" id="logo">Meals</a>
+        <ul id="nav__menue" class="nav__menue">
+          <li>
+            <a
+              href="./index.html"
+              id="meals__nav__link"
+              class="nav__link active"
+              >Meals <span class="total__meals"></span
+            ></a>
+          </li>
+          <li>
+            <a href="./index.html" id="search__nav__link" class="nav__link"
+              >Search Meals
+            </a>
+          </li>
+          <li>
+            <a href="./index.html" id="contact__nav__link" class="nav__link"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div id="hamburger" class="hamburger">
+          <span class="bars"></span>
+          <span class="bars"></span>
+          <span class="bars"></span>
+        </div>
+      </nav>
+    </header>
+    <!-- || End of Header -->
+    <!-- || Screen Loader -->
+    <div id="screen__loader" class="screen__loader hide"></div>
+    <!-- || End Screen Loader -->
+    <!-- || Main -->
+    <main id="main" class="main">
+      <!-- || Section One -->
+      <section id="sect__one" class="sect__one">
+        <!-- || Section__One__Container -->
+        <div id="sect__one__cont" class="sect__one__cont">
+          <!-- || Meals Wrapper -->
+          <div id="meal__wrapper" class="meal__wrapper show">
+            <!-- || Meals Wrpper Items -->
+            <div id="all__meals" class="all__meals"></div>
+            <!-- || Meals Wrapper Items Details for Recipe Btn -->
+            <div id="meal__details__recipe" class="meal__details__recipe">
+              <!-- || Recipe Close Btn -->
+              <!-- <button
+                type="button"
+                id="recipe__close__btn"
+                class="btn recipe__close__btn"
+              >
+                <i class="fas fa-times"></i>
+              </button> -->
+              <div
+                id="meal__details__content__recipe"
+                class="meal__details__content__recip"
+              ></div>
+            </div>
+            <!-- || Meals Wrapper Items Details for Comment Btn -->
+            <div id="meal__details__comment" class="meal__details__comment">
+              <div
+                id="meal__details__content__Comment"
+                class="meal__details__content_Comment"
+              ></div>
+            </div>
+          </div>
+          <!-- || Search Meals Wrapper -->
+          <div id="search__meal__wrapper" class="search__meal__wrapper hide">
+            <!-- || Search Meals Wrapper Upper Heade -->
+            <div id="meal__search" class="meal__search">
+              <h2 class="title">Find Meals for your Ingreients</h2>
+              <blockquote>
+                Note: Please Search Meals by Catagory suach as "egg, chicken,
+                beef......"
+              </blockquote>
+              <div id="meal__search__box" class="meal__search__box">
+                <input
+                  type="text"
+                  class="search__content"
+                  placeholder="Enter an ingredient"
+                  id="serarch__content"
+                />
+                <button type="submit" class="search__btn btn" id="search__btn">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+            <div id="search__meal__result" class="search__meal__result">
+              <h2 class="title">Your Search Results</h2>
+              <!-- || Search Meals Wrpper Items -->
+              <div id="search__all__meals" class="search__all__meals"></div>
+              <!-- || Search Meals Wrapper Items Details for Recipe Btn -->
+              <div
+                id="search__meal__details__recipe"
+                class="search__meal__details__recipe"
+              >
+                <!-- || Search Recipe Close Btn -->
+                <!-- <button
+                  type="button"
+                  id="recipe__close__btn"
+                  class="btn recipe__close__btn"
+                >
+                  <i class="fas fa-times"></i>
+                </button> -->
+                <div
+                  id="search__meal__details__content__recipe"
+                  class="search__meal__details__content__recip"
+                ></div>
+              </div>
+              <!-- || Search Meals Wrapper Items Details for Comment Btn -->
+              <div
+                id="search__meal__details__comment"
+                class="search__meal__details__comment"
+              >
+                <!-- || Search Comment Close Btn -->
+                <!--  <button
+                  type="button"
+                  id="search__comment__close__btn"
+                  class="btn search__comment__close__btn"
+                >
+                  <i class="fas fa-times"></i>
+                </button> -->
+                <!-- || Search Meals Details Content Comment -->
+                <div
+                  id="search__meal__details__content__Comment"
+                  class="search__meal__details__content_Comment"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <!-- Contact Meals Wrapper -->
+          <div id="contact__meal__wrapper" class="contact__meal__wrapper hide">
+            <!-- <h2>contact info</h2> -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- start footer -->
+    <!-- <footer class="footer" id="footer">
+      <h3>All writh reserved</h3>
+      <h3>Mohammad Rafi and</h3>
+    </footer> -->
+    <!-- end footer -->
+
+    
+  </body>
+</html>
